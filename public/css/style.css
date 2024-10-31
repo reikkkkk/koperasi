@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 body {
   font-family: "Poppins", sans-serif;
   color: #0c0c0c;
@@ -144,8 +145,8 @@ a:focus {
 }
 
 .header_section .container-fluid {
-  padding-right: 25px;
-  padding-left: 25px;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 
 .navbar-brand {
@@ -258,7 +259,7 @@ a:focus {
   background-image: url('images/sejarah.jpg'); 
   background-size: cover; 
   background-position: center; 
-  height: 622px; 
+  height: 662px; 
   display: flex; 
   align-items: center; 
   justify-content: center;
@@ -418,7 +419,7 @@ a:focus {
 }
 
 /* Tentang Kami Section */
-.tentang-section {
+.kontak-section {
   background-image: url('images/sejarah.jpg'); /* Ganti dengan background yang diinginkan */
   background-size: cover;
   background-position: center;
@@ -430,7 +431,7 @@ a:focus {
 }
 
 /* Box styling */
-.tentang-box {
+.kontak-box {
   background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
   padding: 30px;
   border-radius: 10px;
@@ -450,7 +451,7 @@ a:focus {
 }
 
 /* Text styling */
-.tentang-title {
+.kontak-title {
   font-size: 36px;
   font-weight: bold;
   text-align: center;
@@ -458,7 +459,7 @@ a:focus {
   color: #333;
 }
 
-.tentang-text {
+.kontak-text {
   font-size: 18px;
   line-height: 1.6;
   color: #333;
@@ -655,4 +656,410 @@ a:focus {
 
 .form-group {
   margin-bottom: 20px;
+}
+
+/* Background */
+.pinjaman-section {
+  background-image: url('images/sejarah.jpg'); /* Ganti dengan background yang diinginkan */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+/* Box styling */
+.pinjaman-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Text styling */
+.pinjaman-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.pinjaman-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Additional styling for subheadings */
+.subheading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #555;
+}
+
+/* Table styling */
+.pinjaman-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.pinjaman-table th, .pinjaman-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.pinjaman-table th {
+  background-color: #f2f2f2;
+}
+
+/* Background */
+.simulasi-section {
+  background-image: url('images/sejarah.jpg'); /* Ganti dengan background yang diinginkan */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+/* Box styling */
+.simulasi-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Text styling */
+.simulasi-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.simulasi-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.simulasi-form {
+  margin-top: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+/* Table styling */
+.simulasi-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+.simulasi-table th, .simulasi-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.simulasi-table th {
+  background-color: #f2f2f2;
+}
+
+/* Background */
+.pengajuan-section {
+  background-image: url('images/sejarah.jpg'); /* Ganti dengan background yang diinginkan */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+/* Box styling */
+.pengajuan-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Text styling */
+.pengajuan-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.pengajuan-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+.pengajuan-form {
+  margin-top: 20px;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+/* Form input styling */
+.form-control {
+  margin-bottom: 15px;
+}
+
+/* Button styling */
+.btn-submit {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-submit:hover {
+  background-color: #0056b3;
+}
+
+/* Background */
+.mutasi-section {
+  background-image: url('images/sejarah.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  height: 622px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+/* Box styling */
+.mutasi-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Text styling */
+.mutasi-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.mutasi-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Table Styling */
+.mutasi-table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.mutasi-table th, .mutasi-table td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+.mutasi-table th {
+  background-color: #007bff;
+  color: white;
+}
+
+.mutasi-table td {
+  background-color: #f9f9f9;
+}
+
+/* Background */
+.saldo-section {
+  background-image: url('images/sejarah.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  height: 622px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+/* Box styling */
+.saldo-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Text styling */
+.saldo-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.saldo-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Balance Box */
+.balance-box {
+  background-color: #007bff;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Button styling */
+.check-balance-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.check-balance-btn:hover {
+  background-color: #218838;
+  color: white;
+}
+
+/* Background */
+.angsuran-section {
+  background-image: url('images/sejarah.jpg'); 
+  background-size: cover; 
+  background-position: center; 
+  height: 622px; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center;
+}
+
+/* Box styling */
+.angsuran-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* Text styling */
+.angsuran-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.angsuran-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 30px;
+}
+
+/* Loan Payment Box */
+.payment-box {
+  background-color: #ff6347;
+  color: white;
+  padding: 20px;
+  border-radius: 5px;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+/* Button styling */
+.check-loan-btn {
+  background-color: #28a745;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.check-loan-btn:hover {
+  background-color: #218838;
+  color: white;
+}
+
+ /* Background */
+ .faq-section {
+  background-image: url('images/faq-bg.jpg'); /* Ganti dengan background yang diinginkan */
+  background-size: cover;
+  background-position: center;
+  padding: 50px 0;
+}
+
+/* Box styling */
+.faq-box {
+  background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white */
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Text styling */
+.faq-title {
+  font-size: 36px;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.faq-text {
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.faq-question {
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #ff6347;
+}
+
+.faq-answer {
+  margin-top: 10px;
+  margin-bottom: 30px;
 }

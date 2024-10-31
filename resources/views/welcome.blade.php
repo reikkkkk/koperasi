@@ -35,17 +35,12 @@
 <body>
     <!-- header section strats -->
     <header class="header_section">
-      <div class="container">
-        <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
-              <img src="css/images/logo.png" alt="Logo Kelurahan Pandan" style="height: 50px; width: auto;"> <!-- Ubah path/to/logo.png dengan lokasi gambar logo -->
-              <span>
-                  KSP Maju Terus
-              </span>
-          </a>
-      </nav>      
+      <div class="container">     
         </nav>
         <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="/">
+            <img src="css/images/logo.png" alt="" width="50" style=""> <!-- Ubah path/to/logo.png dengan lokasi gambar logo -->
+          </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class=""> </span>
           </button>
@@ -88,24 +83,22 @@
                   <a class="dropdown-item" href="{{ url('/multi') }}">Pinjaman Multiguna</a>
                   <a class="dropdown-item" href="{{ url('/tanpaagunan') }}">Pinjaman Tanpa Agunan</a>
                   <a class="dropdown-item" href="{{ url('/simupin') }}">Simulasi Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/riwayat') }}">Riwayat Pinjaman</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Laporan Keuangan
+                    Info Koperasi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ url('/transaksi') }}">Laporan Transaksi</a>
-                  <a class="dropdown-item" href="{{ url('/po') }}">Pembayaran Online</a>
+                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Simpanan/Pinjaman</a>
+                  <a class="dropdown-item" href="{{ url('/mutasi') }}">Mutasi</a>
                   <a class="dropdown-item" href="{{ url('/ceksaldo') }}">Cek Saldo Simpanan</a>
                   <a class="dropdown-item" href="{{ url('/angsuran') }}">Cek Angsuran Pinjaman</a>
                 </div>
-              </li>            
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url('/faq') }}">FAQ </a>
+              </li>            
               </ul>              
           </div>
         </nav>

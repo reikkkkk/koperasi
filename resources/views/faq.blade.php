@@ -37,13 +37,11 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
               <img src="css/images/logo.png" alt="Logo Kelurahan Pandan" style="height: 50px; width: auto;"> <!-- Ubah path/to/logo.png dengan lokasi gambar logo -->
-              <span>
-                  KSP Maju Terus
-              </span>
+              <span>KSP Maju Terus</span>
           </a>
-      </nav>      
+        </nav>      
         </nav>
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,37 +86,73 @@
                   <a class="dropdown-item" href="{{ url('/multi') }}">Pinjaman Multiguna</a>
                   <a class="dropdown-item" href="{{ url('/tanpaagunan') }}">Pinjaman Tanpa Agunan</a>
                   <a class="dropdown-item" href="{{ url('/simupin') }}">Simulasi Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/riwayat') }}">Riwayat Pinjaman</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Laporan Keuangan
+                    Info Koperasi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ url('/transaksi') }}">Laporan Transaksi</a>
-                  <a class="dropdown-item" href="{{ url('/po') }}">Pembayaran Online</a>
+                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Simpanan/Pinjaman</a>
+                  <a class="dropdown-item" href="{{ url('/mutasi') }}">Mutasi</a>
                   <a class="dropdown-item" href="{{ url('/ceksaldo') }}">Cek Saldo Simpanan</a>
                   <a class="dropdown-item" href="{{ url('/angsuran') }}">Cek Angsuran Pinjaman</a>
                 </div>
-              </li>            
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url('/faq') }}">FAQ </a>
+              </li>            
               </ul>              
           </div>
         </nav>
       </div>
     </header>
     <!-- end header section -->
-    <section class="banner-section">
-      <div class="banner-content" style="text-align: center; color: white;">
-        <h1>Selamat Datang di</h1>
-        <h1>Koperasi Simpan Pinjam Maju Terus</h1>
-        <h6>Mengutamakan Pelayanan untuk Kesejahteraan Anggota</h6>
+    <!-- FAQ Section -->
+    <section class="faq-section">
+      <div class="container">
+        <div class="faq-box">
+          <h2 class="faq-title">Frequently Asked Questions (FAQ)</h2>
+
+          <!-- Pertanyaan dan Jawaban FAQ -->
+          <div class="faq-item">
+            <div class="faq-question">1. Bagaimana cara mengajukan pinjaman di KSP Maju Terus?</div>
+            <div class="faq-answer">
+              Untuk mengajukan pinjaman, Anda harus menjadi anggota KSP Maju Terus. Setelah menjadi anggota, Anda bisa datang langsung ke kantor atau mengajukan pinjaman melalui website kami pada bagian pengajuan pinjaman.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">2. Apa syarat-syarat menjadi anggota KSP Maju Terus?</div>
+            <div class="faq-answer">
+              Syarat utama untuk menjadi anggota adalah warga negara Indonesia yang berusia minimal 17 tahun. Selain itu, Anda perlu melengkapi dokumen seperti KTP, NPWP, dan melakukan setoran awal simpanan.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">3. Berapa bunga pinjaman di KSP Maju Terus?</div>
+            <div class="faq-answer">
+              Bunga pinjaman yang kami tawarkan bervariasi tergantung jenis pinjaman yang diajukan. Informasi lengkap mengenai bunga dapat dilihat pada halaman jenis pinjaman atau dengan menghubungi customer service kami.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">4. Bagaimana cara membayar angsuran pinjaman?</div>
+            <div class="faq-answer">
+              Angsuran pinjaman dapat dibayar melalui transfer bank, layanan mobile banking, atau dengan datang langsung ke kantor KSP Maju Terus.
+            </div>
+          </div>
+
+          <div class="faq-item">
+            <div class="faq-question">5. Apakah saya bisa melunasi pinjaman lebih awal?</div>
+            <div class="faq-answer">
+              Ya, Anda bisa melunasi pinjaman lebih awal tanpa dikenakan biaya tambahan. Namun, pastikan untuk menghubungi kami terlebih dahulu agar proses pelunasan berjalan lancar.
+            </div>
+          </div>
+        </div>
       </div>
     </section>
+    <!-- end FAQ Section -->
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>

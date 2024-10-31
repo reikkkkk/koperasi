@@ -37,13 +37,11 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
               <img src="css/images/logo.png" alt="Logo Kelurahan Pandan" style="height: 50px; width: auto;"> <!-- Ubah path/to/logo.png dengan lokasi gambar logo -->
-              <span>
-                  KSP Maju Terus
-              </span>
+              <span>KSP Maju Terus</span>
           </a>
-      </nav>      
+        </nav>      
         </nav>
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,37 +86,68 @@
                   <a class="dropdown-item" href="{{ url('/multi') }}">Pinjaman Multiguna</a>
                   <a class="dropdown-item" href="{{ url('/tanpaagunan') }}">Pinjaman Tanpa Agunan</a>
                   <a class="dropdown-item" href="{{ url('/simupin') }}">Simulasi Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/riwayat') }}">Riwayat Pinjaman</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Laporan Keuangan
+                    Info Koperasi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ url('/transaksi') }}">Laporan Transaksi</a>
-                  <a class="dropdown-item" href="{{ url('/po') }}">Pembayaran Online</a>
+                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Simpanan/Pinjaman</a>
+                  <a class="dropdown-item" href="{{ url('/mutasi') }}">Mutasi</a>
                   <a class="dropdown-item" href="{{ url('/ceksaldo') }}">Cek Saldo Simpanan</a>
                   <a class="dropdown-item" href="{{ url('/angsuran') }}">Cek Angsuran Pinjaman</a>
                 </div>
-              </li>            
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url('/faq') }}">FAQ </a>
+              </li>            
               </ul>              
           </div>
         </nav>
       </div>
     </header>
     <!-- end header section -->
-    <section class="banner-section">
-      <div class="banner-content" style="text-align: center; color: white;">
-        <h1>Selamat Datang di</h1>
-        <h1>Koperasi Simpan Pinjam Maju Terus</h1>
-        <h6>Mengutamakan Pelayanan untuk Kesejahteraan Anggota</h6>
-      </div>
-    </section>
+    <!-- Pengajuan Simpanan dan Pinjaman Section -->
+    <section class="pengajuan-section">
+        <div class="container">
+          <div class="pengajuan-box">
+            <h2 class="pengajuan-title">Pengajuan Simpanan dan Pinjaman</h2>
+            <p class="pengajuan-text">
+              Silakan isi formulir di bawah ini untuk mengajukan simpanan atau pinjaman di KSP Maju Terus. Pastikan semua data yang diisi benar dan lengkap.
+            </p>
+  
+            <!-- Form Pengajuan Simpanan dan Pinjaman -->
+            <form class="pengajuan-form">
+              <div class="form-group">
+                <label for="nama">Nama Lengkap</label>
+                <input type="text" class="form-control" id="nama" placeholder="Masukkan nama lengkap Anda">
+              </div>
+              <div class="form-group">
+                <label for="jenisPinjaman">Jenis Pengajuan</label>
+                <select class="form-control" id="jenisPinjaman">
+                  <option value="simpanan">Simpanan</option>
+                  <option value="pinjaman">Pinjaman</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="nominal">Nominal (Rp)</label>
+                <input type="number" class="form-control" id="nominal" placeholder="Contoh: 10000000">
+              </div>
+              <div class="form-group">
+                <label for="durasi">Durasi Pengembalian (bulan, jika pinjaman)</label>
+                <input type="number" class="form-control" id="durasi" placeholder="Contoh: 12">
+              </div>
+              <div class="form-group">
+                <label for="keterangan">Keterangan</label>
+                <textarea class="form-control" id="keterangan" rows="3" placeholder="Tuliskan keterangan tambahan jika diperlukan"></textarea>
+              </div>
+              <button type="submit" class="btn-submit">Ajukan Sekarang</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <!-- end Pengajuan Simpanan dan Pinjaman Section -->
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>

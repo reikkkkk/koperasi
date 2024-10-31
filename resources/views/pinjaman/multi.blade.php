@@ -88,37 +88,95 @@
                   <a class="dropdown-item" href="{{ url('/multi') }}">Pinjaman Multiguna</a>
                   <a class="dropdown-item" href="{{ url('/tanpaagunan') }}">Pinjaman Tanpa Agunan</a>
                   <a class="dropdown-item" href="{{ url('/simupin') }}">Simulasi Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/riwayat') }}">Riwayat Pinjaman</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Laporan Keuangan
+                    Info Koperasi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ url('/transaksi') }}">Laporan Transaksi</a>
-                  <a class="dropdown-item" href="{{ url('/po') }}">Pembayaran Online</a>
+                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Simpanan/Pinjaman</a>
+                  <a class="dropdown-item" href="{{ url('/mutasi') }}">Mutasi</a>
                   <a class="dropdown-item" href="{{ url('/ceksaldo') }}">Cek Saldo Simpanan</a>
                   <a class="dropdown-item" href="{{ url('/angsuran') }}">Cek Angsuran Pinjaman</a>
                 </div>
-              </li>            
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url('/faq') }}">FAQ </a>
+              </li>            
               </ul>              
           </div>
         </nav>
       </div>
     </header>
     <!-- end header section -->
-    <section class="banner-section">
-      <div class="banner-content" style="text-align: center; color: white;">
-        <h1>Selamat Datang di</h1>
-        <h1>Koperasi Simpan Pinjam Maju Terus</h1>
-        <h6>Mengutamakan Pelayanan untuk Kesejahteraan Anggota</h6>
+    <!-- Pinjaman Multiguna Section -->
+    <section class="pinjaman-section">
+      <div class="container">
+        <div class="pinjaman-box">
+          <h2 class="pinjaman-title">Pinjaman Multiguna</h2>
+          <p class="pinjaman-text">
+            Pinjaman multiguna adalah pinjaman yang dapat digunakan untuk berbagai keperluan, baik untuk kebutuhan pribadi, modal usaha, renovasi rumah, maupun tujuan lain yang bersifat konsumtif maupun produktif. KSP Maju Terus menawarkan pinjaman multiguna dengan bunga yang terjangkau dan proses yang mudah.
+          </p>
+
+          <!-- Jenis Pinjaman -->
+          <h3 class="subheading">Jenis Pinjaman Multiguna</h3>
+          <ul class="pinjaman-text">
+            <li>Pinjaman untuk Renovasi Rumah</li>
+            <li>Pinjaman untuk Modal Usaha</li>
+            <li>Pinjaman untuk Biaya Pendidikan</li>
+            <li>Pinjaman untuk Pembelian Kendaraan</li>
+          </ul>
+
+          <!-- Syarat dan Ketentuan -->
+          <h3 class="subheading">Syarat dan Ketentuan</h3>
+          <p class="pinjaman-text">
+            Berikut adalah syarat dan ketentuan untuk mengajukan pinjaman multiguna di KSP Maju Terus:
+          </p>
+          <ul class="pinjaman-text">
+            <li>Anggota aktif KSP Maju Terus</li>
+            <li>Mengisi formulir pengajuan pinjaman</li>
+            <li>Fotokopi KTP dan Kartu Anggota</li>
+            <li>Surat Keterangan Penghasilan atau Bukti Usaha</li>
+          </ul>
+
+          <!-- Tabel Simulasi Angsuran -->
+          <h3 class="subheading">Simulasi Angsuran</h3>
+          <table class="pinjaman-table">
+            <thead>
+              <tr>
+                <th>Jangka Waktu</th>
+                <th>Jumlah Pinjaman</th>
+                <th>Bunga</th>
+                <th>Angsuran Bulanan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>12 Bulan</td>
+                <td>Rp 20.000.000</td>
+                <td>1.2% per bulan</td>
+                <td>Rp 1.800.000</td>
+              </tr>
+              <tr>
+                <td>24 Bulan</td>
+                <td>Rp 40.000.000</td>
+                <td>1.0% per bulan</td>
+                <td>Rp 2.000.000</td>
+              </tr>
+              <tr>
+                <td>36 Bulan</td>
+                <td>Rp 60.000.000</td>
+                <td>0.8% per bulan</td>
+                <td>Rp 2.100.000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
+    <!-- end Pinjaman Multiguna Section -->
+
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>

@@ -37,13 +37,11 @@
     <header class="header_section">
       <div class="container">
         <nav class="navbar navbar-expand-lg custom_nav-container ">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="/">
               <img src="css/images/logo.png" alt="Logo Kelurahan Pandan" style="height: 50px; width: auto;"> <!-- Ubah path/to/logo.png dengan lokasi gambar logo -->
-              <span>
-                  KSP Maju Terus
-              </span>
+              <span>KSP Maju Terus</span>
           </a>
-      </nav>      
+        </nav>      
         </nav>
         <nav class="navbar navbar-expand-lg custom_nav-container ">
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -88,37 +86,73 @@
                   <a class="dropdown-item" href="{{ url('/multi') }}">Pinjaman Multiguna</a>
                   <a class="dropdown-item" href="{{ url('/tanpaagunan') }}">Pinjaman Tanpa Agunan</a>
                   <a class="dropdown-item" href="{{ url('/simupin') }}">Simulasi Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Pinjaman</a>
-                  <a class="dropdown-item" href="{{ url('/riwayat') }}">Riwayat Pinjaman</a>
                 </div>
               </li>
               <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="/" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Laporan Keuangan
+                    Info Koperasi
                 </a>
                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="{{ url('/transaksi') }}">Laporan Transaksi</a>
-                  <a class="dropdown-item" href="{{ url('/po') }}">Pembayaran Online</a>
+                  <a class="dropdown-item" href="{{ url('/pengajuan') }}">Pengajuan Simpanan/Pinjaman</a>
+                  <a class="dropdown-item" href="{{ url('/mutasi') }}">Mutasi</a>
                   <a class="dropdown-item" href="{{ url('/ceksaldo') }}">Cek Saldo Simpanan</a>
                   <a class="dropdown-item" href="{{ url('/angsuran') }}">Cek Angsuran Pinjaman</a>
                 </div>
-              </li>            
-              <li class="nav-item">
-                <a class="nav-link" href="{{ url('/kontak') }}">Kontak</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{{ url('/faq') }}">FAQ </a>
+              </li>            
               </ul>              
           </div>
         </nav>
       </div>
     </header>
     <!-- end header section -->
-    <section class="banner-section">
-      <div class="banner-content" style="text-align: center; color: white;">
-        <h1>Selamat Datang di</h1>
-        <h1>Koperasi Simpan Pinjam Maju Terus</h1>
-        <h6>Mengutamakan Pelayanan untuk Kesejahteraan Anggota</h6>
+     <!-- Simulasi Pinjaman Section -->
+     <section class="simulasi-section">
+      <div class="container">
+        <div class="simulasi-box">
+          <h2 class="simulasi-title">Simulasi Pinjaman</h2>
+          <p class="simulasi-text">
+            Gunakan simulasi ini untuk memperkirakan angsuran bulanan pinjaman Anda di KSP Maju Terus. Masukkan jumlah pinjaman, suku bunga, dan jangka waktu untuk menghitung simulasi angsuran.
+          </p>
+
+          <!-- Form Simulasi -->
+          <form class="simulasi-form">
+            <div class="form-group">
+              <label for="loanAmount">Jumlah Pinjaman (Rp)</label>
+              <input type="number" class="form-control" id="loanAmount" placeholder="Contoh: 10000000">
+            </div>
+            <div class="form-group">
+              <label for="interestRate">Suku Bunga (% per tahun)</label>
+              <input type="number" class="form-control" id="interestRate" placeholder="Contoh: 12">
+            </div>
+            <div class="form-group">
+              <label for="loanTerm">Jangka Waktu (bulan)</label>
+              <input type="number" class="form-control" id="loanTerm" placeholder="Contoh: 24">
+            </div>
+            <button type="button" class="btn btn-primary" onclick="calculateLoan()">Hitung Angsuran</button>
+          </form>
+
+          <!-- Tabel Hasil Simulasi -->
+          <h3 class="simulasi-title" style="margin-top: 20px;">Hasil Simulasi</h3>
+          <table class="simulasi-table">
+            <thead>
+              <tr>
+                <th>Jumlah Pinjaman</th>
+                <th>Suku Bunga</th>
+                <th>Jangka Waktu</th>
+                <th>Angsuran Bulanan</th>
+              </tr>
+            </thead>
+            <tbody id="simulationResult">
+              <!-- Hasil simulasi akan ditampilkan di sini -->
+            </tbody>
+          </table>
+        </div>
       </div>
     </section>
+    <!-- end Simulasi Pinjaman Section -->
 
   <!-- jQery -->
   <script src="js/jquery-3.4.1.min.js"></script>
@@ -140,6 +174,27 @@
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
   </script>
   <!-- End Google Map -->
+  <script>
+    function calculateLoan() {
+      const loanAmount = parseFloat(document.getElementById("loanAmount").value);
+      const interestRate = parseFloat(document.getElementById("interestRate").value) / 100;
+      const loanTerm = parseInt(document.getElementById("loanTerm").value);
+
+      const monthlyRate = interestRate / 12;
+      const monthlyPayment = (loanAmount * monthlyRate) / (1 - Math.pow(1 + monthlyRate, -loanTerm));
+      
+      // Memasukkan hasil ke tabel
+      const resultRow = `
+        <tr>
+          <td>Rp ${loanAmount.toLocaleString()}</td>
+          <td>${(interestRate * 100).toFixed(2)}%</td>
+          <td>${loanTerm} bulan</td>
+          <td>Rp ${monthlyPayment.toFixed(2).toLocaleString()}</td>
+        </tr>
+      `;
+      document.getElementById("simulationResult").innerHTML = resultRow;
+    }
+  </script>
 
 </body>
 
